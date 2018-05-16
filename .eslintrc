@@ -1,0 +1,26 @@
+{
+  "env": {
+    "commonjs": true
+  },
+  "parser": "typescript-eslint-parser",
+  "extends": ["airbnb-base"],
+  "rules": {
+    "func-names": ["off"],
+    "import/no-dynamic-require": ["off"],
+    "quotes": ["off"],
+    "no-underscore-dangle": ["off"],
+    "no-unused-expressions": ["off"],
+    "no-param-reassign": ["off"],
+    "no-plusplus": ["off"]
+  },
+  "globals": {
+    "it": true,
+    "describe": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "beforeAll": true,
+    "afterAll": true
+  }
+}

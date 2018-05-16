@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types/node"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "build-server",
+    "allowJs": true,
+    "noImplicitAny": false
+  },
+  "include": ["src/**/*.ts"],
+  "files": ["src/server/index.ts"],
+  "exclude": ["node_modules"]
+}
