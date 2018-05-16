@@ -1,0 +1,71 @@
+{
+  "name": "drawchill",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "actid-react-scripts": "1.1.15",
+    "babel-eslint": "7.2.3",
+    "ball-fixtures": "^0.1.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "4.1.1",
+    "eslint-plugin-flowtype": "2.34.1",
+    "eslint-plugin-import": "2.6.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "global": "^4.3.2",
+    "graphql": "0.10.5",
+    "graphql-blocks": "^0.1.5",
+    "graphql-date": "1.0.3",
+    "graphql-tag": "2.4.2",
+    "graphql-type-json": "0.1.4",
+    "jest": "^22.4.3",
+    "jest-environment-node-debug": "^2.0.0",
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.10",
+    "object-assign": "^4.1.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sequelize": "^4.37.7",
+    "sequelize-cli": "^4.0.0",
+    "ts-jest": "^22.4.6",
+    "tsc": "^1.20150623.0",
+    "typescript": "^2.8.3",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(unit|int))\\.(jsx?|tsx?)$",
+    "collectCoverageFrom": [
+      "{server}/schema/**/*.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jest/test-setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]",
+      "gql-crud-test.js"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  }
+}

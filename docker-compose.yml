@@ -1,0 +1,9 @@
+version: '2'
+services:
+  db:
+    image: "postgres:9.6"
+    command: "postgres -c shared_buffers=512MB -c effective_cache_size=1536MB -c work_mem=5242kB -c maintenance_work_mem=128MB -c min_wal_size=1GB -c max_wal_size=2GB -c wal_buffers=16MB"
+    environment:
+      - POSTGRES_DB=drawchill
+    ports:
+      - "5435:5432"
