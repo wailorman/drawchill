@@ -2,5 +2,15 @@
   "extends": "tslint-config-airbnb",
   "rules": {
     "import-name": ["off"]
+  },
+  "globals": {
+    "it": true,
+    "describe": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "beforeAll": true,
+    "afterAll": true
   }
 }

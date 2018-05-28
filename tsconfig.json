@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es6",
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types/node"],
+    "types": ["node", "jest"],
+    "typeRoots": ["node_modules/@types"],
     "module": "commonjs",
     "moduleResolution": "node",
     "experimentalDecorators": true,
