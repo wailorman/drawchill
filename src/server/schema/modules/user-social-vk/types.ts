@@ -1,21 +1,23 @@
 import gql from 'graphql-tag';
-
 // import * as crudTypes from 'graphql-blocks/crud-types';
 const crudTypes = require('graphql-blocks/crud-types');
 
 const types = [
   gql`
-    type User {
+    type UserSocialVk {
       id: ID
+      profileId: String
+      profileUrl: String
+      profilePhotoUrl: String
       createdAt: Date
       updatedAt: Date
     }
 
-    input UserInput {
+    input UserSocialVkInput {
       id: ID
     }
   `,
-  crudTypes({ entityName: 'User' }),
+  crudTypes({ entityName: 'UserSocialVk' }),
 ];
 
 export default types;

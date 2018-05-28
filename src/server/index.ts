@@ -5,6 +5,8 @@ import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa';
 
 import schema from './schema/schema';
 
+const db = require('../../models/index');
+
 const app = new Koa();
 const router = new Router();
 
@@ -13,8 +15,10 @@ const PORT = 3000;
 // koaBody is needed just for POST.
 app.use(koaBody());
 
-router.post('/graphql', graphqlKoa({ schema }));
-router.get('/graphql', graphqlKoa({ schema }));
+const graphqlInstance = graphqlKoa({ schema, context: { db } });
+
+router.post('/graphql', graphqlInstance);
+router.get('/graphql', graphqlInstance);
 
 router.get(
   '/graphiql',
