@@ -1,10 +1,17 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  var User = sequelize.define('User', {
-    id: DataTypes.UUID
-  }, {});
-  User.associate = function(models) {
-    // associations can be defined here
+// module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize) => {
+  const User = sequelize.define(
+    'User',
+    {},
+    {},
+  );
+  User.associate = function (models) {
+    User.hasOne(models.UserSocialVk, {
+      foreignKey: 'userId',
+      as: 'UserSocialVk',
+      hooks: true,
+      onDelete: 'cascade',
+    });
   };
   return User;
 };

@@ -5,7 +5,8 @@
     "database": "drawchill",
     "host": "192.168.99.100",
     "port": "5435",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "operatorsAliases": false
   },
   "test": {
     "username": "postgres",
@@ -13,7 +14,8 @@
     "database": "drawchill",
     "host": "192.168.99.100",
     "port": "5435",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "operatorsAliases": false
   },
   "production": {
     "username": "postgres",
@@ -21,6 +23,7 @@
     "database": "drawchill",
     "host": "192.168.99.100",
     "port": "5435",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "operatorsAliases": false
   }
 }
