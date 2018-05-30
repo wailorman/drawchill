@@ -6,7 +6,8 @@
     "host": "192.168.99.100",
     "port": "5435",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "logging": false
   },
   "test": {
     "username": "postgres",
@@ -15,7 +16,8 @@
     "host": "192.168.99.100",
     "port": "5435",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "logging": false
   },
   "production": {
     "username": "postgres",
@@ -24,6 +26,7 @@
     "host": "192.168.99.100",
     "port": "5435",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "logging": false
   }
 }
