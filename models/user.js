@@ -1,8 +1,13 @@
-// module.exports = (sequelize, DataTypes) => {
-module.exports = (sequelize) => {
+module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     'User',
-    {},
+    {
+      id: {
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+      },
+    },
     {},
   );
   User.associate = function (models) {
