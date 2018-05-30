@@ -65,6 +65,7 @@
     "start:server:watch": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/server/index.ts",
     "start:server:debug": "node --inspect-brk -r ts-node/register ./src/server/index.ts",
     "migrate": "sequelize db:migrate"
+    "sync-db": "node ./scripts/sync-db.js",
   },
   "jest": {
     "testRegex": "(/__tests__/.*|(\\.|/)(unit|int))\\.(jsx?|tsx?)$",
